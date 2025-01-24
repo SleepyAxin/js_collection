@@ -1,0 +1,51 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #000000;
+    color: #666666;
+    text-align: center;
+}
+
+audio
+{
+    width: 450px;
+    margin: 30px 0;
+}
+
+.container
+{
+    height: 420px;
+    overflow: hidden;
+    /* border: 2px solid #ffffff; */
+}
+
+.container ul
+{
+    /* border: 2px solid #ffffff; */
+    list-style: none;
+    /* 使用 transform 代替 margin-top 实现歌词位置的移动 */
+    /* 防止由于 reflow 引起的性能问题 */
+
+    /* transition 属性用于设置元素的过渡效果 */
+    /* 只能用于有具体数值的属性，如 width、height、top、left 等 */
+}
+
+.container li
+{
+    height: 40px;
+    line-height: 30px;
+    /* 将转换效果放置在父组件中，保证出现消失都有效果 */
+    /* 否则，当属性未激活时 transition 失效，没有动画 */
+    transition: 0.5s;
+}
+
+.container li.active
+{
+    color: #ffffff;
+    transform: scale(1.2);
+}
