@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>数据响应式基本原理</title>
+    </head>
+    <body>
+        <div>
+            <p class="firstname"></p>
+            <p class="lastname"></p>
+            <p class="age"></p>
+        </div>
+        <input type="text" oninput="info.firstname = this.value"/>
+        <input type="text" oninput="info.lastname = this.value"/>
+        <input type="number" oninput="info.age = this.value"/>
+    </body>
+    <script src="./js/vue.js"></script>
+    <script src="./js/script.js"></script>
+</html>
